@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <div class="imgwrap">
-      <img :src="'/static/avatar/'+cashDetail.avatar"/>
+      <img :src="'/static/avatar/'+cashDetail.avatar" v-if="cashDetail.avatar"/>
     </div>
     <div class="apply">
       <div class="title">
@@ -26,9 +26,9 @@
     <div class="apply">
       <div class="title">
         {{cashDetail.name}}-申请条件
-        <div v-for="(item,index) in cashDetail.apply" :key="index">
-          {{index+1+'.'+item}}
-        </div>
+      </div>
+      <div v-for="(item,index) in cashDetail.apply" :key="index">
+        {{index+1+'.'+item}}
       </div>
     </div>
     <a @click="goToStore(cashDetail.launchUrl)" class="link">
@@ -96,7 +96,7 @@ export default {
     padding-bottom: 10px;
   }
   .apply>div{
-   margin-top:3px;
+   margin-top:10px;
   }
   .link{
     position: absolute;

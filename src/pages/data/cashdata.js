@@ -22,6 +22,9 @@ const cashData = [
     interest: '0.027%',
     interestDes: '0.027%/日',
     interestUnit: 'D',
+    apply: [
+      '身份证', '身份号', '手机号', '年满18'
+    ],
     launchUrl: 'http://sj.qq.com/myapp/detail.htm?apkName=com.qihoo.loan'
   },
   {
@@ -33,6 +36,9 @@ const cashData = [
     interest: '0.78%',
     interestDes: '0.78%/月',
     interestUnit: 'M',
+    apply: [
+      '身份证', '身份号', '手机号', '年满18'
+    ],
     launchUrl: 'http://sj.qq.com/myapp/detail.htm?apkName=com.dai58.finance.shenfen'
   },
   {
@@ -44,6 +50,9 @@ const cashData = [
     interest: '0.05%',
     interestDes: '30-500元',
     interestUnit: 'M',
+    apply: [
+      '身份证', '身份号', '手机号', '年满18'
+    ],
     launchUrl: 'http://sj.qq.com/myapp/detail.htm?apkName=com.xiaocheng.miaobt'
   },
   {
@@ -55,6 +64,9 @@ const cashData = [
     interest: '0.01%',
     interestDes: '0.01%/日',
     interestUnit: 'M',
+    apply: [
+      '身份证', '身份号', '手机号', '年满18'
+    ],
     launchUrl: 'http://sj.qq.com/myapp/detail.htm?apkName=cn.dxqbpos'
   }
 ]
