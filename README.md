@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # liubin915249126
 
 > A Mpvue project
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# xiaochengxu
+>>>>>>> 815d7523879927a74a350f699ea8e04e7a60616a
