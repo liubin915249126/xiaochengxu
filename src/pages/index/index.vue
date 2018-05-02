@@ -1,7 +1,12 @@
 <template>
   <div class="container">
+    <len-carousel>
+      <div v-for="(item,index) in 4" :key="index">
+        <span>{{item}}</span>
+      </div>      
+    </len-carousel>
     <div class="title">
-      热门推荐
+      <!-- 热门推荐 -->
     </div>
     <div class="cashlistwrap">
       <div v-for="(cash, index) in cashData" :key="index" class="cashwrap" @click="bindViewTap(index)">
@@ -26,7 +31,8 @@
 </template>
 
 <script>
-import cashData from '../data/cashdata'
+// import cashData from '../data/cashdata'
+import lenCarousel from '../../components/len-carousel'
 
 export default {
   data () {
@@ -40,8 +46,11 @@ export default {
       wx.navigateTo({ url })
     }
   },
+  components: {
+    'len-carousel': lenCarousel
+  },
   created () {
-    this.cashData = cashData
+    // this.cashData = cashData
   }
 }
 </script>

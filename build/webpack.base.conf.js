@@ -71,8 +71,12 @@ module.exports = {
             options: {
               checkMPEntry: true
             }
-          },
+          }
         ]
+      },
+      {
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

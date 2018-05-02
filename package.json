@@ -11,6 +11,9 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "circular-json": "^0.5.3",
+    "less": "^3.0.2",
+    "less-loader": "^4.1.0",
     "mpvue": "^1.0.9",
     "vuex": "^2.3.1"
   },
