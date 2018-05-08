@@ -5,8 +5,8 @@
         <span>{{item}}</span>
       </div>      
     </len-carousel>
-    <div class="title">
-      <!-- 热门推荐 -->
+    <div class="title" @click="goToRequest">
+      热门推荐
     </div>
     <div class="cashlistwrap">
       <div v-for="(cash, index) in cashData" :key="index" class="cashwrap" @click="bindViewTap(index)">
@@ -43,6 +43,10 @@ export default {
   methods: {
     bindViewTap (index) {
       const url = '../cashdetail/main?id=' + index
+      wx.navigateTo({ url })
+    },
+    goToRequest () {
+      const url = '../request/main'
       wx.navigateTo({ url })
     }
   },
