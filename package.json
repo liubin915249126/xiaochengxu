@@ -5,9 +5,9 @@
   "author": "刘宾 <915249126@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "rimraf dist && node build/build.js",
+    "dev": "node client/build/dev-server.js",
+    "start": "node client/build/dev-server.js",
+    "build": "rimraf client/dist && node client/build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
