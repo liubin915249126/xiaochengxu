@@ -4,7 +4,8 @@
   </div>
 </template>
 <script>
-import {post, get} from '../../utils/request';
+import request from '../../../utils/request'
+import config from '../../../config/config'
 export default {
   data () {
     return {
@@ -12,8 +13,13 @@ export default {
     }
   },
   methods: {
-    request () {
-
+    async request () {
+      try {
+        const res = await request.get(config.login)
+        console.log(res)
+      } catch (err) {
+        console.log(err)
+      }
     }
   }
 }
