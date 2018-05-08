@@ -12,7 +12,7 @@ import { showBusy, showSuccess, showModel } from '../../utils'
 export default {
   data () {
     return {
-
+      logged: false
     }
   },
   methods: {
@@ -25,7 +25,7 @@ export default {
     //   }
     // }
     request () {
-      if (this.data.logged) return
+      // if (this.data.logged) return
       showBusy('正在登录')
       var that = this
 
