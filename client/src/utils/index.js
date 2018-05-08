@@ -111,3 +111,26 @@ export function isObjectValueEqual (a, b) {
   }
   return true
 }
+// 显示繁忙提示
+export const showBusy = text => wx.showToast({
+  title: text,
+  icon: 'loading',
+  duration: 10000
+})
+
+// 显示成功提示
+export const showSuccess = text => wx.showToast({
+  title: text,
+  icon: 'success'
+})
+
+// 显示失败提示
+export const showModel = (title, content) => {
+  wx.hideToast()
+
+  wx.showModal({
+    title,
+    content: JSON.stringify(content),
+    showCancel: false
+  })
+}

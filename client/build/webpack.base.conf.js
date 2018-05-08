@@ -42,6 +42,7 @@ module.exports = {
     alias: {
       'vue': 'mpvue',
       'axios': 'axios/dist/axios',
+      'qcloud': '../src/vendor/wafer2-client-sdk/index',
       '@': resolve('src')
     },
     symlinks: false
