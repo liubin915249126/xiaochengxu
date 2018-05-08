@@ -1,35 +1,12 @@
 {
-	"description": "项目配置文件。",
 	"client": "./client",
 	"svr": "./server",
-	"miniprogramRoot": "./client/dist/",
+	"miniprogramRoot": "./client",
 	"qcloudRoot": "./server",
 	"setting": {
-		"urlCheck": true,
-		"es6": false,
-		"postcss": true,
-		"minified": true,
 		"newFeature": true
 	},
-	"compileType": "miniprogram",
 	"appid": "wxa4009c486c34679e",
-	"projectname": "liubin915249126",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": []
-		}
-	}
+	"projectname": "sever",
+	"condition": {}
 }
