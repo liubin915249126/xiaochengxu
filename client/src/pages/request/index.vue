@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import request from '../../../utils/request'
+// import request from '../../../utils/request'
 import config from '../../../config/config'
 const qcloud = require('../../vendor/wafer2-client-sdk/index')
 import { showBusy, showSuccess, showModel } from '../../utils'
@@ -29,6 +29,7 @@ export default {
     // }
     request () {
       if (this.logged) return
+      console.log(this)
       showBusy('正在登录')
       var that = this
       qcloud.setLoginUrl(config.service.loginUrl)
@@ -65,8 +66,8 @@ export default {
     testCgi () {
       // showBusy('请求中...')
       // request.get(`${config.service.host}/weapp/demo`)
-      const that = this
-      console.log(this);
+      // const that = this
+      console.log(this)
       qcloud.request({
         url: `${config.service.host}/weapp/demo`,
         login: false,

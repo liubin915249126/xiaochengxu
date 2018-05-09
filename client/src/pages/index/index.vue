@@ -6,7 +6,7 @@
       </div>      
     </len-carousel>
     <div class="title" @click="goToRequest">
-      热门推荐
+      热门推荐11
     </div>
     <div class="cashlistwrap">
       <div v-for="(cash, index) in cashData" :key="index" class="cashwrap" @click="bindViewTap(index)">
