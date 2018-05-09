@@ -63,23 +63,24 @@ export default {
       })
     },
     testCgi () {
-      showBusy('请求中...')
-      request.get(`${config.service.host}/weapp/demo`)
-      // var that = this
-      // qcloud.request({
-      //   url: `${config.service.host}/weapp/demo`,
-      //   login: false,
-      //   success (result) {
-      //     showSuccess('请求成功完成')
-      //     that.setData({
-      //       requestResult: JSON.stringify(result.data)
-      //     })
-      //   },
-      //   fail (error) {
-      //     showModel('请求失败', error)
-      //     console.log('request fail', error)
-      //   }
-      // })
+      // showBusy('请求中...')
+      // request.get(`${config.service.host}/weapp/demo`)
+      const that = this
+      console.log(this);
+      qcloud.request({
+        url: `${config.service.host}/weapp/demo`,
+        login: false,
+        success (result) {
+          showSuccess('请求成功完成')
+          // that.setData({
+          //   requestResult: JSON.stringify(result.data)
+          // })
+        },
+        fail (error) {
+          showModel('请求失败', error)
+          console.log('request fail', error)
+        }
+      })
     }
   }
 }
