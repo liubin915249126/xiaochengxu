@@ -64,7 +64,7 @@ export default {
       })
     },
     testCgi () {
-      // showBusy('请求中...')
+      showBusy('请求中...')
       // request.get(`${config.service.host}/weapp/demo`)
       // const that = this
       console.log(this)
