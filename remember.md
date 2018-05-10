@@ -22,3 +22,10 @@ master: 个人金融
 cash：mpvue + server
 server ：原始server
 lb_dev: 原始mpvue
+
+#### koa-bodyparser
+```js
+  var bodyParser = require('koa-bodyparser');
+  app.use(bodyParser());
+```
+#### 

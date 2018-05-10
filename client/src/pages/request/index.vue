@@ -3,6 +3,7 @@
     <input type="button" value="request" @click="request"/>
     <img :src='userInfo.avatarUrl' alt="avatar" v-if="userInfo.avatarUrl"/>
     <input type="button" value="cgi" @click="testCgi"/>
+    <input type="button" value="addTest" @click="addTest"/>
   </div>
 </template>
 <script>
@@ -15,7 +16,16 @@ export default {
   data () {
     return {
       logged: false,
-      userInfo: {}
+      userInfo: {},
+      addData: {
+        open_id: 11,
+        uuid: 11,
+        skey: 11,
+        create_time: new Date(),
+        last_visit_time: new Date(),
+        session_key: 11,
+        user_info: 'info'
+      }
     }
   },
   methods: {
@@ -70,6 +80,26 @@ export default {
       console.log(this)
       qcloud.request({
         url: `${config.service.host}/weapp/demo`,
+        login: false,
+        success (result) {
+          showSuccess('请求成功完成')
+          // that.setData({
+          //   requestResult: JSON.stringify(result.data)
+          // })
+        },
+        fail (error) {
+          showModel('请求失败', error)
+          console.log('request fail', error)
+        }
+      })
+    },
+    addTest () {
+      const that = this
+      showBusy('请求中...')
+      qcloud.request({
+        url: `${config.service.host}/weapp/addtest`,
+        data: that.addData,
+        method: 'POST',
         login: false,
         success (result) {
           showSuccess('请求成功完成')
