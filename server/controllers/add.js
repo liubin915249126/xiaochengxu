@@ -6,4 +6,5 @@ module.exports = async (ctx, next) => {
     await mysql('cTest').insert({open_id, uuid, skey, create_time, last_visit_time, session_key, user_info}).then(res => {
         ctx.state.data = res
     })
+    ctx.state.data = body
 }
