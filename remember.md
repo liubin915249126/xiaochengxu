@@ -16,7 +16,17 @@
 18205556911@163.com //个人小程序
 liubin915249126@163.com //企业小程序
 
-#### 分支管理
-master:个人小程序mpvue
-lb_dev:原始mpvue
-server:node后台  
+[mpvue 踩坑](http://www.bslxx.com/m/view.php?aid=1824)
+
+#### branch 
+master: 个人金融
+cash：mpvue + server
+server ：原始server
+lb_dev: 原始mpvue
+
+#### koa-bodyparser
+```js
+  var bodyParser = require('koa-bodyparser');
+  app.use(bodyParser());
+```
+#### 
