@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <len-carousel>
+    <!-- <len-carousel>
       <div v-for="(item,index) in 4" :key="index">
         <span>{{item}}</span>
       </div>      
-    </len-carousel>
+    </len-carousel> -->
     <div class="title">
       热门推荐
     </div>
@@ -32,7 +32,7 @@
 
 <script>
 import cashData from '../data/cashdata'
-import lenCarousel from '../../components/len-carousel'
+// import lenCarousel from '../../components/len-carousel'
 
 export default {
   data () {
@@ -47,7 +47,7 @@ export default {
     }
   },
   components: {
-    'len-carousel': lenCarousel
+    // 'len-carousel': lenCarousel
   },
   created () {
     this.cashData = cashData
