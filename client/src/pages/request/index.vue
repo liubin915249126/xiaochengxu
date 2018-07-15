@@ -4,6 +4,15 @@
     <img :src='userInfo.avatarUrl' alt="avatar" v-if="userInfo.avatarUrl"/>
     <input type="button" value="cgi" @click="testCgi"/>
     <input type="button" value="addTest" @click="addTest"/>
+    <div>
+      <li v-for="(item, index) in resData" :key="index">
+        {{item.open_id}}--
+        {{item.user_info}} 
+        <span  @click="deleteTest(item.open_id)">X</span>
+        <span  @click="modifyTest(item.open_id)">modify</span>
+        <span  @click="detailTest(item.open_id)">detail</span>
+      </li>
+    </div>
   </div>
 </template>
 <script>
@@ -11,22 +20,19 @@
 import config from '../../../config/config'
 const qcloud = require('../../vendor/wafer2-client-sdk/index')
 import { showBusy, showSuccess, showModel } from '../../utils'
+// import moment from 'moment'
 
 export default {
   data () {
     return {
       logged: false,
       userInfo: {},
-      addData: {
-        open_id: 11,
-        uuid: 11,
-        skey: 11,
-        create_time: new Date(),
-        last_visit_time: new Date(),
-        session_key: 11,
-        user_info: 'info'
-      }
+      resData: [],
+      addData: {}
     }
+  },
+  onShow () {
+    this.queryList()
   },
   methods: {
     // async request () {
@@ -98,7 +104,15 @@ export default {
       showBusy('请求中...')
       qcloud.request({
         url: `${config.service.host}/weapp/addtest`,
-        data: that.addData,
+        data: {
+          open_id: parseInt(Math.random() * 100),
+          uuid: parseInt(Math.random() * 100),
+          skey: parseInt(Math.random() * 100),
+          // create_time: moment(new Date()).format('YYYY-MM-DD HH:MM:SS'),
+          // last_visit_time: moment(new Date()).format('YYYY-MM-DD HH:MM:SS'),
+          session_key: parseInt(Math.random() * 100),
+          user_info: 'info'
+        },
         method: 'POST',
         login: false,
         success (result) {
@@ -106,6 +120,85 @@ export default {
           // that.setData({
           //   requestResult: JSON.stringify(result.data)
           // })
+          that.queryList()
+        },
+        fail (error) {
+          showModel('请求失败', error)
+          console.log('request fail', error)
+        }
+      })
+    },
+    deleteTest (openId) {
+      const that = this
+      qcloud.request({
+        url: `${config.service.host}/weapp/deleteItem`,
+        method: 'DELETE',
+        data: {
+          open_id: openId
+        },
+        login: false,
+        success (result) {
+          console.log(result)
+          showSuccess('请求成功完成')
+          that.queryList()
+        },
+        fail (error) {
+          showModel('请求失败', error)
+          console.log('request fail', error)
+        }
+      })
+    },
+    modifyTest (openId) {
+      const that = this
+      qcloud.request({
+        url: `${config.service.host}/weapp/modifyItem`,
+        method: 'PUT',
+        login: false,
+        data: {
+          open_id: openId,
+          user_info: 'new info'
+
+        },
+        success (result) {
+          console.log(result)
+          showSuccess('请求成功完成')
+          that.resData = result.data
+        },
+        fail (error) {
+          showModel('请求失败', error)
+          console.log('request fail', error)
+        }
+      })
+    },
+    detailTest (openId) {
+      // const that = this
+      qcloud.request({
+        url: `${config.service.host}/weapp/detail`,
+        method: 'GET',
+        login: false,
+        data: {
+          open_id: openId
+        },
+        success (result) {
+          console.log(result)
+          showSuccess('请求成功完成')
+        },
+        fail (error) {
+          showModel('请求失败', error)
+          console.log('request fail', error)
+        }
+      })
+    },
+    queryList () {
+      const that = this
+      qcloud.request({
+        url: `${config.service.host}/weapp/query`,
+        method: 'GET',
+        login: false,
+        success (result) {
+          console.log(result)
+          showSuccess('请求成功完成')
+          that.resData = result.data
         },
         fail (error) {
           showModel('请求失败', error)

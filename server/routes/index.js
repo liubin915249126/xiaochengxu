@@ -34,6 +34,11 @@ router.post('/message', controllers.message.post)
 
 router.get('/demo', controllers.demo)
 
-router.post('/addtest', controllers.add)
+router.post('/addtest', controllers.test.add)
+router.get('/query', controllers.test.query)
+router.delete('/deleteItem', controllers.test.deleteItem)
+router.put('/modifyItem', controllers.test.modifyItem)
+router.get('/detail', controllers.test.detail)
+
 
 module.exports = router
