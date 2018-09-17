@@ -1,10 +1,8 @@
 {
-	"description": "项目配置文件。",
-	"client": "client/",
-	"svr": "server/",
-	"miniprogramRoot": "client/dist/",
-	"qcloudRoot": "server/",
-	"cloud": true,
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
@@ -13,9 +11,13 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"appid": "wxa4009c486c34679e",
-	"projectname": "liubin915249126",
 	"libVersion": "2.3.0",
+	"appid": "wx99812e7b0c1f4338",
+	"projectname": "test",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
 	"condition": {
 		"search": {
 			"current": -1,
