@@ -1,9 +1,10 @@
 {
 	"description": "项目配置文件。",
-	"client": "./client",
-	"svr": "./server",
-	"miniprogramRoot": "./client/dist/",
-	"qcloudRoot": "./server",
+	"client": "client/",
+	"svr": "server/",
+	"miniprogramRoot": "client/dist/",
+	"qcloudRoot": "server/",
+	"cloud": true,
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
@@ -14,6 +15,7 @@
 	"compileType": "miniprogram",
 	"appid": "wxa4009c486c34679e",
 	"projectname": "liubin915249126",
+	"libVersion": "2.3.0",
 	"condition": {
 		"search": {
 			"current": -1,

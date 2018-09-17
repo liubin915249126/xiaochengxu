@@ -3,10 +3,13 @@
     <len-carousel>
       <div v-for="(item,index) in 4" :key="index">
         <span>{{item}}</span>
-      </div>      
+      </div>
     </len-carousel>
     <div class="title" @click="goToRequest">
       热门推荐11
+    </div>
+    <div class="title" @click="goToTodos">
+      todos
     </div>
     <div class="cashlistwrap">
       <div v-for="(cash, index) in cashData" :key="index" class="cashwrap" @click="bindViewTap(index)">
@@ -27,7 +30,7 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -47,6 +50,10 @@ export default {
     },
     goToRequest () {
       const url = '../request/main'
+      wx.navigateTo({ url })
+    },
+    goToTodos () {
+      const url = '../todos/main'
       wx.navigateTo({ url })
     }
   },
