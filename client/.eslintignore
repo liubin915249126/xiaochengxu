@@ -1,4 +1,0 @@
-build/*.js
-config/*.js
-src/vendor/wafer2-client-sdk/*.js
-src/vendor/wafer2-client-sdk/lib/*.js
