@@ -22,7 +22,7 @@ import './index.less'
 }))
 class Index extends Component {
 
-    config = {
+  config = {
     navigationBarTitleText: '首页'
   }
 
@@ -36,6 +36,13 @@ class Index extends Component {
 
   componentDidHide () { }
 
+  goToLive () {
+    Taro.navigateTo({url:'../live/index'});
+    // Taro.redirectTo({
+    //   url: '../live/index'
+    // })
+  }
+
   render () {
     return (
       <View className='index'>
@@ -44,6 +51,7 @@ class Index extends Component {
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>Hello, World</Text></View>
+        <Button onClick={this.goToLive}>live</Button>
       </View>
     )
   }

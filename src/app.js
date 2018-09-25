@@ -14,13 +14,36 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/live/index',
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    'tabBar': {
+      'color': '#626567',
+      'selectedColor': '#2A8CE5',
+      'backgroundColor': '#FBFBFB',
+      'borderStyle': 'white',
+      'list': [{
+        'pagePath': 'pages/index/index',
+        'text': '首页',
+        // 'iconPath': 'images/index.png',
+        // 'selectedIconPath': 'images/index_focus.png'
+      }, {
+        'pagePath': 'pages/live/index',
+        'text': '发现',
+        // 'iconPath': 'images/discovery.png',
+        // 'selectedIconPath': 'images/discovery_focus.png'
+      },  {
+        'pagePath': 'pages/live/index',
+        'text': '我的',
+        // 'iconPath': 'images/burger.png',
+        // 'selectedIconPath': 'images/burger_focus.png'
+      }]
     }
   }
 
