@@ -1,8 +1,8 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "taro",
+	"projectname": "51youse",
 	"description": "liubin",
-	"appid": "touristappid",
+	"appid": "wx9ee7c8939a9eb945",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
