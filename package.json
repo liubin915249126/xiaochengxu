@@ -14,13 +14,13 @@
     "circular-json": "^0.5.3",
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
-    "mpvue": "^1.0.9",
+    "mpvue": "1.0.18",
     "vuex": "^2.3.1"
   },
   "devDependencies": {
-    "mpvue-loader": "^1.0.12",
+    "mpvue-loader": "1.1.4",
+    "mpvue-template-compiler": "1.0.18",
     "mpvue-webpack-target": "^1.0.0",
-    "mpvue-template-compiler": "^1.0.9",
     "portfinder": "^1.0.13",
     "postcss-mpvue-wxss": "^1.0.0",
     "px2rpx-loader": "^0.1.8",
