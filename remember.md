@@ -16,6 +16,16 @@
 18205556911@163.com //个人小程序
 liubin915249126@163.com //企业小程序
 
+
+wx9ee7c8939a9eb945
+wxa81a29b9a4bb18d2
+wx99812e7b0c1f4338
+
+
+gh_cffa5c9d1c08 liubin18205556911@gmail.com  wxa4009c486c34679e
+
+gh_5945c84ff987
+
 [mpvue 踩坑](http://www.bslxx.com/m/view.php?aid=1824)
 
 #### branch 
